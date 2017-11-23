@@ -1,0 +1,141 @@
+
+
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <!--CSS FILE-->
+      <link rel = "stylesheet" href = "css/feedback.css">
+
+      <!--Let browser know website is optimized for mobile-->
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!--BOOTSTRAP-->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!--JQUERY-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>feedback</title>
+    </head>
+
+    <body>
+<div class="container-fluid">
+<div class="wrapper">
+
+
+
+
+<div class="container">
+ 
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg pulse-button" data-toggle="modal" data-target="#myModal">Запись на сервис</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <form class="feedback-form" action="/action_page.php">
+    <label for="fname">Фамилия</label>
+    <input type="text" id="fname" name="firstname" placeholder="Ваша фамилия..">
+
+    <label for="lname">Имя</label>
+    <input type="text" id="lname" name="lastname" placeholder="Ваше имя..">
+
+    <label for="country">Город</label>
+    <select id="country" name="country">
+      <option value="australia">Киев</option>
+      <option value="canada">Чернигов</option>
+      <option value="usa">Браворы</option>
+    </select>
+    <label for="date">Желаемая дата</label><br>
+    <input type="date" id="date" name="date" placeholder="Желаемая дата.."><br>
+    <label for="tel">Номер телефона</label><br>
+    <input type="tel" id="tel" name="tel" placeholder="Ваш номер телефона.."><br>
+    <label for="tel">Номер автомобиля</label><br>
+    <input type="tel" id="tel" name="tel" placeholder="Номер Вашего атомобиля.."><br>
+    <label for="subject">Комментарии</label>
+    <textarea id="subject" name="subject" placeholder="Ваши комментарии.." ></textarea>
+  
+   <br>
+    <input class="button" type="submit" value="ОТПРАВИТЬ">
+  </form>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div><!--WRAPPER-->
+
+
+</div>
+
+
+<!--ON_CLICK BUTTON WITHOUT BOOTSTRAP-->
+<!-- <script>
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+</script>
+<script>//Make the DIV element draggagle:
+dragElement(document.getElementById(("mydiv")));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}</script> -->
+ 
+    </body>
+  </html>
+        

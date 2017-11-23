@@ -1,0 +1,83 @@
+/*Обертка для акций*/
+.wrapper-posts {
+    width: 80%;
+    margin: 0 auto;
+}
+/*Оформление блока акции*/
+.img-box {
+    margin-bottom: 1%;
+    height: 250px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+.img-box:hover {
+    box-shadow: 0 5px 2px -3px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+.post-1 {
+	background: url(../img/changing-oil.png) no-repeat;
+    background-size: cover; 
+}
+.post-2 {
+	background: url(../img/dry-cleaning.png) no-repeat;
+    background-size: cover;
+}
+.post-3 {
+	background: url(../img/electrician.png) no-repeat;
+    background-size: cover;
+}
+.post-4 {
+	background: url(../img/salon.png) no-repeat;
+    background-size: cover;
+}
+.post-5 {
+	background: url(../img/under.png) no-repeat;
+    background-size: cover;
+}
+.post-6 {
+	background: url(../img/wheels.png) no-repeat;
+    background-size: cover;
+}
+/*Оформление кнопок*/
+.services-button-box {
+ display: flex;
+ justify-content: space-around;
+ position: relative;
+ top: 40%;
+}
+.ghost-button {
+    color: #ffffff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  color: red;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease-in,
+              border-color 0.3s ease-in;
+}
+.text-h3-services {
+    color: bisque;
+}
+.btn-services {
+    font-size: large;
+}
+
+@media (max-width: 768px) {
+    .text-h3-services {
+        font-size: 40px;
+    }
+    .services-button-box {
+        top: 20%;
+    }
+    .btn-services {
+        width: 40%;
+        font-size: large;
+    }
+}
